@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-slider.min.css">
+
+	<style>
+		#ex1Slider .slider-selection {
+	background: #BABABA;
+}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<span id="ex18-label-1" class="hidden">Example slider label</span>
+		        <input id="ex19" type="text"
+		              data-provide="slider"
+		              data-slider-ticks="[1, 2, 3, 4]"
+		              data-slider-ticks-labels='["short", "medium", "Otro" , "long"]'
+		              data-slider-min="1"
+		              data-slider-max="3"
+		              data-slider-step="1"
+		              data-slider-value="3"
+		              data-slider-tooltip="hide" />
+
+			</div>
+		</div>
+	</div>
+
+<script src="js/jquery.min.js"> </script>	
+<script src="js/bootstrap.js"> </script>	
+<script src="js/bootstrap-slider.min.js"> </script>	
+
+<script>
+	$( document).ready(function(){
+
+		$('#ex19').slider({
+			formatter: function(value) {
+				return 'Current value: ' + value;
+			}
+		});
+	});
+</script>
+
+</body>
+</html>
+
+
